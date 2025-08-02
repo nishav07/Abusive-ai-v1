@@ -42,6 +42,7 @@ app.post("/chat", async (req, res) => {
 
 
   
+  
   chatData.push({ role: "user", content: userMsg });
   contents.push({
     role: "user",
