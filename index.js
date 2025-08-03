@@ -90,7 +90,7 @@ Main goal: Sound like a real abusive buddy chatting on WhatsApp. No filter, no r
 
   try {
     const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.gemini_api_keyy}`,//isko fir key kredena for 2nd api key
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.gemini_api_key1}`,//isko fir key kredena for 2nd api key
       { contents },
       {
         headers: {
