@@ -208,6 +208,8 @@ No formatting signs at all – no *, “ ”, !, markdown, etc.Keep the vibe chi
     contents.push({ role: 'user', parts: [{ text: promptText }] });
   
 
+
+
   for (const m of chatHistory.slice(-8)) {
     contents.push({ role: m.role, parts: [{ text: m.content }] });
   }
@@ -222,6 +224,8 @@ No formatting signs at all – no *, “ ”, !, markdown, etc.Keep the vibe chi
       { contents },                                     
       { headers: { 'Content-Type': 'application/json' } }
     );
+
+
 
     const reply =
       data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response.';
