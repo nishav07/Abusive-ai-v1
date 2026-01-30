@@ -242,6 +242,6 @@ No formatting signs at all – no *, “ ”, !, markdown, etc.Keep the vibe chi
 
 app.get('/home', (req, res) => res.render('home.ejs'));
 
-app.listen(port, () =>
-  console.log(`✅ Giggle Bro running at http://localhost:${port}/home`)
+app.listen(port, ()✅ =>
+  console.log(` Giggle Bro running at http://localhost:${port}/home`)
 );
