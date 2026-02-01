@@ -195,7 +195,7 @@ async function handleChat(req, res) {
    
    const data = prompt.absuivePrompt(aiType,userMsg);
    const replyy = await  mainfx(data);
-   console.log("AI ka reply",reply.text)
+   console.log("AI ka reply",replyy.text)
    const reply = replyy.text;
 
     chatHistory.push({ role: 'model', content: reply });
