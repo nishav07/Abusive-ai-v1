@@ -211,7 +211,7 @@ async function handleChat(req, res) {
 
 
 
-app.get('/home', (req, res) => res.render('home.ejs'));
+app.get('/', (req, res) => res.render('home.ejs'));
 
 app.listen(port,() =>
   console.log(`✅ Giggle Bro running at http://localhost:${port}/home`)
