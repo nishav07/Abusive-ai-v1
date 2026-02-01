@@ -177,7 +177,7 @@ async function handleChat(req, res) {
 
   const contents = [];
 
-    contents.push({ role: 'user', parts: [{ text: promptText }] });
+    contents.push({ role: 'user', parts: [{ text: userMsg }] });
 
 
   for (const m of chatHistory.slice(-8)) {
@@ -201,7 +201,7 @@ async function handleChat(req, res) {
     chatHistory.push({ role: 'model', content: reply });
     res.json({ reply });
   } catch (err) {
-    console.error('Gemini AI error:', err?.response?.data || err);
+    console.error('Gemini AI error:', err.message);
     res.status(500).json({
       reply: 'Aaj mood nahi AI ka...kal aa bhai. 😪 [Internal server error]'
     });
