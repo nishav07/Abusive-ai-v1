@@ -3,7 +3,7 @@ require("dotenv").config();
 
 
 const ai = new GoogleGenAI({
-  apiKey: process.env.NEW_KEY
+  apiKey: process.env.NEW_KEY2
 });
 
 
