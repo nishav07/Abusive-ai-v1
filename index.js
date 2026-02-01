@@ -129,6 +129,8 @@
 ///--------------------------------- tetsing version of ai---------------------------------------------------------------
 
 const express     = require('express');
+app.set("trust proxy", 1);
+
 require('dotenv').config();
 const axios       = require('axios');
 const rateLimit   = require('express-rate-limit');
