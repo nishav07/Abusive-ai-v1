@@ -73,7 +73,7 @@ async function handleChat(req, res) {
   } catch (err) {
     console.error('Gemini AI error:', err.message);
     res.status(500).json({
-      reply: 'Aaaj mood nahi kr rhaaa is kaam ko kal dekhtaa hunn. [Internal server error]'
+      reply: '<audio controls autoplay> <source src="/audio/erraud.mp3" type="audio/mpeg"></audio>'
     });
   }
 }
@@ -82,5 +82,5 @@ async function handleChat(req, res) {
 app.get('/', (req, res) => res.render('home.ejs'));
 
 app.listen(port,() =>
-  console.log(`✅ Giggle Bro running at http://localhost:${port}/home`)
+  console.log(`✅ Giggle Bro running at http://localhost:${port}/`)
 );
