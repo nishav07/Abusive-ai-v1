@@ -73,7 +73,7 @@ async function handleChat(req, res) {
   } catch (err) {
     console.error('Gemini AI error:', err.message);
     res.status(500).json({
-      reply: 'Aaj mood nahi AI ka...kal aa bhai. 😪 [Internal server error]'
+      reply: 'Aaaj mood nahi kr rhaaa is kaam ko kal dekhtaa hunn. [Internal server error]'
     });
   }
 }
