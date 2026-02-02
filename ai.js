@@ -1,9 +1,11 @@
 const { GoogleGenAI } = require("@google/genai");
 require("dotenv").config();
 
+let api1 = false;
+
 
 const ai = new GoogleGenAI({
-  apiKey: process.env.NEW_KEY2
+  apiKey: process.env.NEW_KEY
 });
 
 
