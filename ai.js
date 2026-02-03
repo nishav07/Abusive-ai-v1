@@ -3,9 +3,20 @@ require("dotenv").config();
 
 let api1 = false;
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.NEW_KEY
-});
+
+function getAI() {
+  const apiKey = api1
+    ? process.env.NEW_KEY2
+    : process.env.NEW_KEY;
+
+  api1 = !api1;
+
+  return new GoogleGenAI({ apiKey });
+}
+
+
+const ai = getAI();
+
 
 
 async function reply(prompt) {
