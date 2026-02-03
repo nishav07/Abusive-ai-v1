@@ -45,6 +45,7 @@ async function handleChat(req, res) {
   if (!userChats.has(userId)) userChats.set(userId, []);
   const chatHistory = userChats.get(userId);
 
+  
   const contents = [];
 
     contents.push({ role: 'user', parts: [{ text: userMsg }] });
@@ -53,6 +54,7 @@ async function handleChat(req, res) {
   for (const m of chatHistory.slice(-8)) {
     contents.push({ role: m.role, parts: [{ text: m.content }] });
   }
+
 
   chatHistory.push({ role: 'user', content: userMsg });
   contents.push({ role: 'user', parts: [{ text: userMsg }] });
@@ -67,6 +69,7 @@ async function handleChat(req, res) {
    const replyy = await  mainfx(data);
    console.log("AI ka reply",replyy.text)
    const reply = replyy.text;
+
 
     chatHistory.push({ role: 'model', content: reply });
     res.json({ reply });
